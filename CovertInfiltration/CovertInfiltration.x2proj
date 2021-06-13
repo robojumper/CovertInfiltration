@@ -9,6 +9,12 @@
     <RootNamespace>CovertInfiltration</RootNamespace>
     <ProjectGuid>{8fb7cab2-6a58-4701-aa3c-bf18f61b8749}</ProjectGuid>
   </PropertyGroup>
+  <PropertyGroup>
+    <SolutionRoot>$(MSBuildProjectDirectory)\..\</SolutionRoot>
+    <ScriptsDir>$(SolutionRoot).scripts\</ScriptsDir>
+    <BuildCommonRoot>$(ScriptsDir)X2ModBuildCommon\</BuildCommonRoot>
+  </PropertyGroup>
+  <Import Project="$(BuildCommonRoot)XCOM2.targets" />
   <ItemGroup>
     <Folder Include="Config\" />
     <Folder Include="Localization\" />
@@ -21,8 +27,7 @@
     <Folder Include="Src\LW_Tuple\Classes" />
     <Folder Include="Src\ModConfigMenuAPI\" />
     <Folder Include="Src\ModConfigMenuAPI\Classes\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Folder Include="CookedPCConsole" />
     <Content Include="Config\XComContent.ini">
       <SubType>Content</SubType>
     </Content>
@@ -559,11 +564,6 @@
     <Content Include="Src\ModConfigMenuAPI\MCM_API_Includes.uci">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="CookedPCConsole\README.txt" />
   </ItemGroup>
-  <PropertyGroup>
-    <SolutionRoot>$(MSBuildProjectDirectory)\..\</SolutionRoot>
-    <ScriptsDir>$(SolutionRoot).scripts\</ScriptsDir>
-    <BuildCommonRoot>$(ScriptsDir)X2ModBuildCommon\</BuildCommonRoot>
-  </PropertyGroup>
-  <Import Project="$(BuildCommonRoot)XCOM2.targets" />
 </Project>
