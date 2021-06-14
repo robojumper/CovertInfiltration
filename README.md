@@ -47,6 +47,8 @@ The following code should illustrate all of this:
 
 ** Use custom log macros - `CI_Log`, `CI_Warn` and `CI_Trace`. Any PR that uses `ScriptLog` (eg. `log("Something")`) __will not be merged__
 
+*This project verifies its project file through GitHub Actions.*
+
 ## Naming files/classes
 
 Please keep the following guidelines in mind:
